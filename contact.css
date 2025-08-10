@@ -1,0 +1,149 @@
+*{
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+   background-color: #0A111C;
+}
+.container{
+    display: grid;
+   justify-content: space-between;
+    align-items: baseline;
+    gap: 15px;
+    margin: 20px;
+
+}
+.navigation{
+    height: 120px;
+    grid-column: span 2;
+    grid-area: navigation;
+}
+.navigation ul {
+  display: flex;
+  gap:15px;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+.navigation a{
+    text-decoration: none;
+    color: bisque;
+    font-size: 20px;
+}
+a:hover{
+    color: red;
+}
+#name{
+    color: bisque;
+    font-size: 35px;
+    justify-content: flex-start;
+
+}
+.navigation span{
+    font-size: 40px;
+    color: red;
+    padding: 0;
+}
+span{
+    color: bisque;
+    font-size: 20px;
+    padding: 10px;
+}
+#phone{
+    width: 50px;
+    height: 50px;
+ grid-area: phone;
+ padding: 15px;
+
+}
+#phone span:hover{
+    color: chartreuse;
+}
+ img{
+    width: 40px;
+    height: 40px;
+}
+#email{
+ grid-area: email;
+ height:50px ;
+ padding: 15px;
+  
+}
+#email span:hover{
+    color: chartreuse;
+    
+}
+#git{
+  grid-area: git;
+  padding: 25px;
+}
+#git a:hover{
+    color: chartreuse;
+}
+#git a{
+    text-decoration: none;
+    color: bisque;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+#linkedin{
+  grid-area: link;
+   height: 50px;
+   padding: 15px;
+   margin-top: 10px;
+}
+#linkedin a:hover{
+    color: chartreuse;
+}
+#linkedin a{
+    text-decoration: none;
+    color: bisque;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+@media (min-width: 439px) {
+    .container {
+        grid-template-areas:
+            'navigation'
+            'phone '
+            'email'
+            'git'
+            ' link';
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    #name{
+        margin-right: 23%;
+    }
+}
+@media(min-width:769px){
+    .container{
+      grid-template-areas: 
+      'navigation navigation'
+      'phone email'
+      'git link';
+
+      grid-template-columns: 1fr 1fr ;
+      grid-template-rows: 1fr 1fr;
+    }
+    #name{
+        margin-right: 60%;
+    }
+}
+
+@media(min-width:969px){
+    .container{
+      grid-template-areas: 
+      'navigation navigation navigation navigation'
+      'phone email git link';
+
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto;
+     
+      justify-content: baseline;
+    }
+    
+    #name{
+        margin-right: 75%;
+    }
+}

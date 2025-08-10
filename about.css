@@ -1,0 +1,149 @@
+*{
+     font-family: 'Times New Roman', Times, serif;
+   background-color: #0A111C;
+   box-sizing: border-box;
+}
+.container{
+    display: grid;
+    gap: 5px;
+    margin: 2px 2px;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.navigation{
+    height: 120px;
+    grid-column: span 2;
+    grid-area: navigation;
+}
+.navigation ul {
+  display: flex;
+  gap:15px;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: bisque;
+    font-size: 20px;
+}
+a:hover{
+    color: red;
+}
+#name{
+    color: bisque;
+    font-size: 35px;
+    justify-content: flex-start;
+
+}
+.navigation span{
+    font-size: 40px;
+    color: red;
+}
+.about{
+width: 250px;
+height: auto;
+grid-column: 1;
+padding: 10px;
+ margin-bottom: 12px;
+ grid-area:about;
+margin-top: -90px;
+line-height: 25px;
+}
+.education{
+    grid-column: 2;
+    padding: 10px;
+ margin-bottom: 12px;
+ line-height: 25px;
+ grid-area:education;
+
+}
+.education li{
+    list-style: circle;
+}
+.hobbies{
+    width: 250px;
+    height: auto;
+    grid-column: 2;
+   line-height: 25px;
+   padding: 10px;
+   grid-area:hobbies;
+
+}
+.hobbies li{
+    list-style: disc;
+}
+.skill{
+grid-column: 1;
+width: 250px;
+line-height: 25px;
+   padding: 10px;
+ grid-area:skill;
+}
+.skill li{
+    list-style: square;
+}
+p,h1,li{
+    color: bisque;
+}
+h1:hover{
+    color: chartreuse;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'navigation'
+        'about'
+        'education'
+        'skill'
+        'hobbies';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 20px;
+    overflow-y: auto; 
+}
+@media (min-width: 439px) {
+    .container {
+        grid-template-areas:
+            'navigation'
+            'about '
+            'education'
+            'skill'
+            ' hobbies';
+        grid-template-rows: 0.8fr 1fr 0.5fr;
+        grid-template-columns: 1fr;
+    }
+    #name{
+        margin-right: 20%;
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        grid-template-areas:
+            'navigation navigation'
+            'about education'
+            'skill hobbies';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    #name{
+        margin-right: 55%;
+    }
+}
+
+
+@media (min-width: 969px) {
+    .container {
+        grid-template-areas:
+            'navigation navigation navigation navigation'
+            'about education skill hobbies';
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    #name{
+        margin-right: 75%;
+    }
+}
+

@@ -1,0 +1,123 @@
+*{
+   font-family: 'Times New Roman', Times, serif;
+   background-color: #0A111C;
+   box-sizing: border-box;
+}
+.container{
+    display:grid;
+    gap : 5px;
+    justify-content: space-between;
+    margin: 10px 10px 10px 10px;
+}
+img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.navigation{
+    height: 50px;
+    grid-column: span 2;
+    grid-area: navigation;
+   
+}
+.navigation ul {
+  display: flex;
+  gap:15px;
+  background-color: transparent;
+  justify-content: flex-end;
+  margin-left: -90px;
+  list-style-type: none;
+
+  
+}
+#name{
+    color: bisque;
+    font-size: 35px;
+    justify-content: flex-start;
+
+}
+.navigation span{
+    font-size: 40px;
+    color: red;
+}
+
+
+a{
+    text-decoration: none;
+    color: bisque;
+    font-size: 19px;
+}
+a:hover{
+    color: red;
+}
+
+.info{
+ grid-column: 1;
+ grid-area: info;
+ height: 50%;
+ margin-bottom: -140px;
+margin-left: 50px;
+}
+h1,h2,p{
+    color:bisque
+}
+h1{
+    font-size: 40px;
+}
+.image{
+    width: 200px;
+ grid-column: 2;
+ grid-area: image;
+ margin-top: -50px;
+ margin-right: 80px;
+}
+.info button{
+    color:black;
+    background-color:lightgreen;
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 2px 2px 2px 2px black;
+    margin-bottom: 10px;
+}
+ button:hover{
+    background-color:coral;
+}
+@media(min-width:439px){
+    .container{
+        grid-template-areas: 
+        'navigation'
+        'image'
+        'info';
+        grid-template-rows: 1fr  1fr 1fr;
+        grid-template-columns: 1fr;
+        
+    }
+    #name{
+
+        margin-right: 20%;
+    }
+}
+@media(min-width:769px){
+    .container{
+        grid-template-areas: 
+        'navigation navigation'
+        'info image';
+        grid-template-rows: 1fr  1fr ;
+        grid-template-columns:  auto auto;
+    }
+    #name{
+        margin-right: 50%;
+    }
+}
+@media(min-width:969px){
+    .container{
+        grid-template-areas: 
+        'navigation navigation navigation'
+        'info image';
+        grid-template-rows: 1fr  1fr 1fr;
+        grid-template-columns: auto auto;
+    }
+    #name{
+        margin-right: 70%;
+    }
+}
